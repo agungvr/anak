@@ -2,12 +2,15 @@
   "name": "anak",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
-  "private": true,
-  "dependencies": {
-    "@swc/helpers": "~0.4.11"
+  "scripts": {
+    "prepare": "husky install"
   },
+  "private": true,
   "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
+    "@commitlint/config-nx-scopes": "^17.4.2",
+    "@commitlint/cz-commitlint": "^17.4.2",
     "@nrwl/eslint-plugin-nx": "15.5.1",
     "@nrwl/js": "15.5.1",
     "@nrwl/linter": "15.5.1",
@@ -16,13 +19,17 @@
     "@nrwl/workspace": "15.5.1",
     "@swc/cli": "~0.1.55",
     "@swc/core": "^1.2.173",
+    "@swc/helpers": "~0.4.11",
     "@typescript-eslint/eslint-plugin": "^5.36.1",
     "@typescript-eslint/parser": "^5.36.1",
     "@vitest/coverage-c8": "~0.25.8",
     "@vitest/ui": "^0.25.8",
+    "commitizen": "^4.2.6",
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
+    "husky": "^8.0.0",
     "jsdom": "~20.0.3",
+    "lint-staged": "^13.1.0",
     "nx": "15.5.1",
     "prettier": "^2.6.2",
     "semantic-release-npm-github-publish": "^1.5.4",
