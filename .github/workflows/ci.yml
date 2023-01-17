@@ -1,9 +1,10 @@
-name: anak
+name:
 
 on:
   push:
     branches:
-      - main
+      - master
+  pull_request:
 
 env:
   HUSKY: 0
