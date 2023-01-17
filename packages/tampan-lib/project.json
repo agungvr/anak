@@ -1,0 +1,41 @@
+{
+  "name": "tampan-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/tampan-lib/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/tampan-lib",
+        "main": "packages/tampan-lib/src/index.ts",
+        "tsConfig": "packages/tampan-lib/tsconfig.lib.json",
+        "assets": ["packages/tampan-lib/*.md"]
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs tampan-lib {args.ver} {args.tag}"
+      },
+      "dependsOn": ["build"]
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/tampan-lib/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["coverage/packages/tampan-lib"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/tampan-lib"
+      }
+    }
+  },
+  "tags": []
+}
