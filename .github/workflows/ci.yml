@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request_target:
+  pull_request:
 
 env:
   HUSKY: 0
@@ -30,9 +30,12 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           fetch-depth: 0
 
-      - name: Checkout [Default Branch]
-        uses: actions/checkout@v3
-        if: ${{ github.event_name != 'pull_request' }}
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v2
         with:
-          token: ${{ secrets.GH_TOKEN }}
-          fetch-depth: 0
+          main-branch-name: ${{ github.base_ref }}
+
+      - name: Detect package manager
+        id: package_manager
+        run: |
+          echo "::set-output name=name::$([[ -f ./yarn.lock ]] && echo "yarn" || ([[ -f ./pnpm-lock.yaml ]] && echo "pnpm") || echo "npm")"
