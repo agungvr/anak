@@ -35,6 +35,13 @@
         "passWithNoTests": true,
         "reportsDirectory": "../../coverage/packages/tampan-lib"
       }
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx semantic-release-plus --extends ./packages/tampan-lib/release.config.js"
+      }
     }
   },
   "tags": []
