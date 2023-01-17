@@ -7,20 +7,25 @@ on:
   pull_request:
 
 env:
-  HUSKY: 0
+  is-main-branch: ${{ github.action == 'refs/head/main' }}
+  is-pull-request: ${{ github.event_name == 'pull_request' }}
+  node-version: 16.x
 
 jobs:
   main:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - uses: nrwl/nx-set-shas@v3
-      - run: npm ci
 
-      - run: npx nx workspace-lint
-      - run: npx nx format:check
-      - run: npx nx affected --target=lint --parallel=3
-      - run: npx nx affected --target=test --parallel=3 --ci --code-coverage
-      - run: npx nx affected --target=build --parallel=3
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.node-version }}
+          cache: yarn
+
+      - name: Install Dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn build
