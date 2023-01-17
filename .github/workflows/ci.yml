@@ -30,11 +30,6 @@ jobs:
           token: ${{ secrets.GH_TOKEN }}
           fetch-depth: 0
 
-      - name: Checkout [Default Branch]
-        uses: actions/checkout@v2
-        if: ${{ github.event_name != 'pull_request' }}
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          fetch-depth: 0
+ 
 
      
