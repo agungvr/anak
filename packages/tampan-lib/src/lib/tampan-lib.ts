@@ -1,3 +1,3 @@
 export function tampanLib(): string {
-  return 'tampan-lib';
+  return 'tampan-lib1';
 }
