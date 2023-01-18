@@ -1,7 +1,7 @@
 {
   "name": "@agungvr/tampan-lib",
   "version": "0.0.0-semantic-release",
-  "type": "commonjs",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/agungvr/anak.git",
@@ -9,5 +9,11 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js"
+    }
   }
 }
