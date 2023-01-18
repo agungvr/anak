@@ -8,6 +8,6 @@
     "directory": "packages/tampan-lib"
   },
   "publishConfig": {
-    "@agungvr:registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com"
   }
 }
