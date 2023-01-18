@@ -14,6 +14,7 @@ jobs:
     permissions:
       packages: write
       contents: read
+      actions: write
     runs-on: ubuntu-latest
     defaults:
       run:
