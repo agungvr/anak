@@ -37,8 +37,6 @@ jobs:
 
       - name: Nx set SHAs
         uses: nrwl/nx-set-shas@v3.0.1
-        with:
-          main-branch-name: ${{ github.base_ref }}
 
       - name: Detect package manager
         id: package_manager
