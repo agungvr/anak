@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16]
-        yarn-version: ['1.22.x']
+        npm-version: [8]
     steps:
       - name: Checkout [Pull Request]
         uses: actions/checkout@v3
@@ -47,39 +47,33 @@ jobs:
         run: |
           echo "::set-output name=name::$([[ -f ./yarn.lock ]] && echo "yarn" || ([[ -f ./pnpm-lock.yaml ]] && echo "pnpm") || echo "npm")"
 
-      - name: Set node/yarn versions using volta
+      - name: Set node/npm versions using volta
         uses: volta-cli/action@v4
         with:
           node-version: '${{ matrix.node-version }}'
-          yarn-version: '${{ matrix.yarn-version }}'
+          npm-version: '${{ matrix.npm-version }}'
 
-      - name: Print node/yarn versions
+      - name: Print node/npm versions
         id: versions
         run: |
-          node_ver=$( node --version )
-          yarn_ver=$( yarn --version || true )
+          node_ver=$( node --version )     
           echo "Node: ${node_ver:1}"
-          if [[ $yarn_ver != '' ]]; then echo "Yarn: $yarn_ver"; fi
+          echo "NPM: $(npm --version )"
           echo "::set-output name=node_version::${node_ver:1}"
 
-      - name: Get yarn cache directory path
-        if: steps.package_manager.outputs.name == 'yarn'
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-
-      - name: Use the node_modules cache if available [yarn]
-        if: steps.package_manager.outputs.name == 'yarn'
+      - name: Use the node_modules cache if available [npm]
+        if: steps.package_manager.outputs.name == 'npm'
         uses: actions/cache@v2
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-
 
       - name: Install dependencies
         run: |
-          echo "Running yarn install --frozen-lockfile"
-          yarn install --frozen-lockfile
+          echo "Running npm ci"
+          npm ci
 
       - run: |
           npx nx workspace-lint
