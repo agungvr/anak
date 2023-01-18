@@ -57,12 +57,12 @@ jobs:
           yarn_ver=$( yarn --version || true )
           echo "Node: ${node_ver:1}"
           if [[ $yarn_ver != '' ]]; then echo "Yarn: $yarn_ver"; fi
-          echo "node_version=${node_ver:1} >> $GITHUB_OUTPUT"
+          echo "node_version=${node_ver:1}" >> $GITHUB_OUTPUT
 
       - name: Get yarn cache directory path
         if: steps.package_manager.outputs.name == 'yarn'
         id: yarn-cache-dir-path
-        run: echo "dir=$(yarn cache dir) >> $GITHUB_OUTPUT"
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
 
       - name: Use the node_modules cache if available [yarn]
         if: steps.package_manager.outputs.name == 'yarn'
