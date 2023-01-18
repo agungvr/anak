@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.10.0...tampan-lib-v1.11.0) (2023-01-18)
+
+
+### Features
+
+* lapet ([a73446e](https://github.com/agungvr/anak/commit/a73446edfa8e52ce2aa0b84209d4bc8ed527f969))
+
 # [1.10.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.9.0...tampan-lib-v1.10.0) (2023-01-18)
 
 ### Features
