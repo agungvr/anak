@@ -11,9 +11,6 @@
       "main"
     ]
   },
-  "dependencies": {
-    "@swc/helpers": "~0.4.11"
-  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
