@@ -33,8 +33,7 @@ jobs:
       - name: Install environment
         run: yarn install --frozen-lockfile
 
-      - name: Run lint
-        run: npx nx affected:lint -- --base="origin/main"
-
-      - name: Tests coverage
-        run: npx nx affected:test -- --base="origin/main" --codeCoverage
+      - name: Derive appropriate SHAs for base and head for `nx affected` commands
+        uses: nrwl/nx-set-shas@v3
+        with:
+          main-branch-name: ${{ github.base_ref }}
