@@ -42,7 +42,7 @@ jobs:
       - name: Detect package manager
         id: package_manager
         run: |
-          echo "::set-output name=name::$([[ -f ./yarn.lock ]] && echo "yarn" || ([[ -f ./pnpm-lock.yaml ]] && echo "pnpm") || echo "npm")"
+          echo "name=$([[ -f ./yarn.lock ]] && echo "yarn")" >> $GITHUB_OUTPUT
 
       - name: Set node/yarn versions using volta
         uses: volta-cli/action@v4
@@ -57,12 +57,12 @@ jobs:
           yarn_ver=$( yarn --version || true )
           echo "Node: ${node_ver:1}"
           if [[ $yarn_ver != '' ]]; then echo "Yarn: $yarn_ver"; fi
-          echo "::set-output name=node_version::${node_ver:1}"
+          echo "node_version=${node_ver:1} >> $GITHUB_OUTPUT"
 
       - name: Get yarn cache directory path
         if: steps.package_manager.outputs.name == 'yarn'
         id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn cache dir)"
+        run: echo "dir=$(yarn cache dir) >> $GITHUB_OUTPUT"
 
       - name: Use the node_modules cache if available [yarn]
         if: steps.package_manager.outputs.name == 'yarn'
