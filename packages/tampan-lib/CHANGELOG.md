@@ -1,9 +1,8 @@
 # [1.14.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.13.0...tampan-lib-v1.14.0) (2023-01-18)
 
-
 ### Features
 
-* jalan cok ([3913b27](https://github.com/agungvr/anak/commit/3913b27bf18d406501b9c76f8706aa265b59d7d4))
+- jalan cok ([3913b27](https://github.com/agungvr/anak/commit/3913b27bf18d406501b9c76f8706aa265b59d7d4))
 
 # [1.13.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.12.0...tampan-lib-v1.13.0) (2023-01-18)
 
