@@ -11,6 +11,9 @@
       "main"
     ]
   },
+  "dependencies": {
+    "@swc/helpers": "~0.4.11"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
@@ -44,8 +47,5 @@
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.0.2",
     "vitest": "^0.25.8"
-  },
-  "peerDependencies": {
-    "@swc/helpers": "~0.4.11"
   }
 }
