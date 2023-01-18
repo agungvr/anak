@@ -30,12 +30,6 @@
       "files": ["*.js", "*.jsx"],
       "extends": ["plugin:@nrwl/nx/javascript"],
       "rules": {}
-    },
-    {
-      "files": ["*.md"],
-      "rules": {
-        "no-multiple-empty-lines": "error"
-      }
     }
   ]
 }
