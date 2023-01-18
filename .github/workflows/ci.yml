@@ -66,7 +66,7 @@ jobs:
 
       - name: Use the node_modules cache if available [yarn]
         if: steps.package_manager.outputs.name == 'yarn'
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-yarn-${{ hashFiles('**/yarn.lock') }}
