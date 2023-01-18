@@ -22,7 +22,7 @@ jobs:
         yarn-version: ['1.22.x']
     steps:
       - name: Checkout [Pull Request]
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: ${{ github.event_name == 'pull_request' }}
         with:
           ref: ${{ github.event.pull_request.head.sha }}
@@ -30,14 +30,14 @@ jobs:
           fetch-depth: 0
 
       - name: Checkout [Default Branch]
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         if: ${{ github.event_name != 'pull_request' }}
         with:
           token: ${{ secrets.NPM_TOKEN }}
           fetch-depth: 0
 
       - name: Nx set SHAs
-        uses: nrwl/nx-set-shas@v3.0.1
+        uses: nrwl/nx-set-shas@v3
 
       - name: Detect package manager
         id: package_manager
@@ -45,12 +45,12 @@ jobs:
           echo "::set-output name=name::$([[ -f ./yarn.lock ]] && echo "yarn" || ([[ -f ./pnpm-lock.yaml ]] && echo "pnpm") || echo "npm")"
 
       - name: Set node/yarn versions using volta
-        uses: volta-cli/action@fdf4cf319494429a105efaa71d0e5ec67f338c6e
+        uses: volta-cli/action@v4
         with:
           node-version: '${{ matrix.node-version }}'
           yarn-version: '${{ matrix.yarn-version }}'
 
-      - name: Print node/npm/yarn/pnpm versions
+      - name: Print node/yarn versions
         id: versions
         run: |
           node_ver=$( node --version )
