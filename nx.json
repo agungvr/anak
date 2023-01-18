@@ -1,15 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "anak",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "ZWYzYjY0YTEtZGY3Zi00NmYxLWJiM2YtYmQ3NTVkMWZhN2UxfHJlYWQtd3JpdGU="
-      }
-    }
-  },
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
