@@ -35,8 +35,8 @@ jobs:
           token: ${{ secrets.NPM_TOKEN }}
           fetch-depth: 0
 
-      - name: Derive appropriate SHAs for base and head for `nx affected` commands
-        uses: nrwl/nx-set-shas@v2
+      - name: Nx set SHAs
+        uses: nrwl/nx-set-shas@v3.0.1
         with:
           main-branch-name: ${{ github.base_ref }}
 
