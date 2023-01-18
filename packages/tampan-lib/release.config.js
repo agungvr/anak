@@ -1,4 +1,4 @@
-const name = 'ts-library';
+const name = 'tampan-lib';
 const srcRoot = `packages/${name}`;
 
 module.exports = {
