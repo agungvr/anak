@@ -11,7 +11,9 @@ env:
 
 jobs:
   main:
-    permissions: write-all
+    permissions:
+      packages: write
+      contents: read
     runs-on: ubuntu-latest
     defaults:
       run:
