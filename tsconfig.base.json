@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@anak/tampan-lib": ["packages/tampan-lib/src/index.ts"]
+      "tampan-lib": ["packages/tampan-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
