@@ -22,7 +22,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16]
-        npm-version: [8]
+        npm-version: [9]
     steps:
       - name: Checkout [Pull Request]
         uses: actions/checkout@v3
