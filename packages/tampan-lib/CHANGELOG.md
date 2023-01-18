@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.5.0...tampan-lib-v1.6.0) (2023-01-18)
+
+
+### Features
+
+* update ([6b1db22](https://github.com/agungvr/anak/commit/6b1db22b92e080a359dd37d3f6e4697cb3580dc9))
+
 # [1.5.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.4.0...tampan-lib-v1.5.0) (2023-01-18)
 
 ### Features
