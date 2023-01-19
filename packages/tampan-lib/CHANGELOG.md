@@ -1,9 +1,8 @@
 # [1.2.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.1.0...tampan-lib-v1.2.0) (2023-01-19)
 
-
 ### Features
 
-* fix linter ([cc56ad6](https://github.com/agungvr/anak/commit/cc56ad61b932cf77fe6e488c45d8090b2c2e31ee))
+- fix linter ([cc56ad6](https://github.com/agungvr/anak/commit/cc56ad61b932cf77fe6e488c45d8090b2c2e31ee))
 
 # [1.1.0](https://github.com/agungvr/anak/compare/tampan-lib-v1.0.0...tampan-lib-v1.1.0) (2023-01-19)
 

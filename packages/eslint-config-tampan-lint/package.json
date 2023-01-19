@@ -1,5 +1,5 @@
 {
-  "name": "@agungvr/tampan-lint",
+  "name": "@agungvr/eslint-config-tampan-lint",
   "version": "0.0.0-semantic-release",
   "type": "commonjs",
   "dependencies": {

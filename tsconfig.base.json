@@ -15,8 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@agungvr/tampan-lib": ["packages/tampan-lib/src/index.ts"],
-      "@agungvr/tampan-lint": ["packages/tampan-lint/src/index.ts"]
+      "@agungvr/eslint-config-tampan-lint": [
+        "packages/eslint-config-tampan-lint/index.ts"
+      ],
+      "@agungvr/tampan-lib": ["packages/tampan-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,34 @@
+{
+  "name": "eslint-config-tampan-lint",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/eslint-config-tampan-lint",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/eslint-config-tampan-lint",
+        "main": "packages/eslint-config-tampan-lint/index.js",
+        "tsConfig": "packages/eslint-config-tampan-lint/tsconfig.lib.json",
+        "assets": ["packages/eslint-config-tampan-lint/*.md"]
+      }
+    },
+    "publish": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node tools/scripts/publish.mjs eslint-config-tampan-lint {args.ver} {args.tag}"
+      },
+      "dependsOn": ["build"]
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx semantic-release-plus --extends ./packages/eslint-config-tampan-lint/release.config.js",
+        "parallel": false
+      }
+    }
+  },
+  "tags": []
+}
