@@ -1,0 +1,27 @@
+{
+  "name": "@agungvr/tampan-lint",
+  "version": "0.0.0-semantic-release",
+  "type": "commonjs",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "eslint": "^8.32.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-sonarjs": "^0.18.0",
+    "eslint-plugin-unused-imports": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agungvr/anak.git",
+    "directory": "packages/tampan-lint"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js"
+    }
+  }
+}
