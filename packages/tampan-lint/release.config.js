@@ -1,4 +1,4 @@
-const name = 'eslint-config-tampan';
+const name = 'tampan-lint';
 const srcRoot = `packages/${name}`;
 
 module.exports = {
