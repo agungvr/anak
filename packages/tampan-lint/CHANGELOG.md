@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/agungvr/anak/compare/tampan-lint-v1.0.0...tampan-lint-v1.1.0) (2023-01-19)
+
+
+### Features
+
+* fix linter ([cc56ad6](https://github.com/agungvr/anak/commit/cc56ad61b932cf77fe6e488c45d8090b2c2e31ee))
+* pp ([55d3a14](https://github.com/agungvr/anak/commit/55d3a14484f4b86dababcb94589b3c4da46f2e91))
+
 # 1.0.0 (2023-01-19)
 
 ### Features
