@@ -32,8 +32,8 @@
       "executor": "@nrwl/vite:test",
       "outputs": ["coverage/packages/tampan-lib"],
       "options": {
-        "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/packages/tampan-lib"
+        "coverage": false,
+        "passWithNoTests": true
       }
     },
     "release": {
