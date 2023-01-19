@@ -5,7 +5,7 @@
   "dependencies": {
     "@swc/helpers": "~0.4.11"
   },
-  "repository": "https://github.com/agungvr/anak",
+  "repository": "https://github.com/agungvr/nx-github-package-tampan",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },

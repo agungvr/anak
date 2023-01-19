@@ -1,9 +1,8 @@
 # [1.1.0](https://github.com/agungvr/anak/compare/eslint-config-tampan-lint-v1.0.0...eslint-config-tampan-lint-v1.1.0) (2023-01-19)
 
-
 ### Features
 
-* update ([59064d7](https://github.com/agungvr/anak/commit/59064d71badf7ebc0858b5ea94a65532959c9045))
+- update ([59064d7](https://github.com/agungvr/anak/commit/59064d71badf7ebc0858b5ea94a65532959c9045))
 
 # 1.0.0 (2023-01-19)
 
