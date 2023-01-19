@@ -1,7 +1,7 @@
 {
   "name": "tampan-lint",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/tampan-lint/src",
+  "sourceRoot": "packages/tampan-lint",
   "projectType": "library",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/tampan-lint",
-        "main": "packages/tampan-lint/src/index.js",
+        "main": "packages/tampan-lint/index.js",
         "tsConfig": "packages/tampan-lint/tsconfig.lib.json",
         "assets": ["packages/tampan-lint/*.md"]
       }
