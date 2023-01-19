@@ -5,7 +5,11 @@
   "dependencies": {
     "@swc/helpers": "~0.4.11"
   },
-  "repository": "https://github.com/agungvr/anak",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agungvr/anak.git",
+    "directory": "packages/tampan-lib"
+  },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },

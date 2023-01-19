@@ -20,6 +20,14 @@
         "command": "node tools/scripts/publish.mjs tampan-lint {args.ver} {args.tag}"
       },
       "dependsOn": ["build"]
+    },
+    "release": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx semantic-release-plus --extends ./packages/tampan-lint/release.config.js",
+        "parallel": false
+      }
     }
   },
   "tags": []
