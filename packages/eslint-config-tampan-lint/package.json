@@ -19,5 +19,8 @@
       "import": "./index.js",
       "require": "./index.js"
     }
+  },
+  "peerDependencies": {
+    "eslint": ">= 3"
   }
 }
