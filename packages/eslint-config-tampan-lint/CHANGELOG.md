@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/agungvr/nx-github-package-tampan/compare/eslint-config-tampan-lint-v1.1.0...eslint-config-tampan-lint-v1.2.0) (2023-01-19)
+
+
+### Features
+
+* update ([345d8a4](https://github.com/agungvr/nx-github-package-tampan/commit/345d8a4b27fff4a8227d4cf8135c9212d984171e))
+
 # [1.1.0](https://github.com/agungvr/anak/compare/eslint-config-tampan-lint-v1.0.0...eslint-config-tampan-lint-v1.1.0) (2023-01-19)
 
 ### Features
