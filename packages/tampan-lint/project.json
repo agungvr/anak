@@ -20,13 +20,6 @@
         "command": "node tools/scripts/publish.mjs tampan-lint {args.ver} {args.tag}"
       },
       "dependsOn": ["build"]
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["packages/tampan-lint/**/*.ts"]
-      }
     }
   },
   "tags": []
