@@ -22,7 +22,7 @@ module.exports = {
         assets: [`${srcRoot}/package.json`, `${srcRoot}/CHANGELOG.md`],
         message:
           `release(version): Release ${name} ` +
-          '${nextRelease.version} [skip ci]\n\n${nextRelease.notes}',
+          '${nextRelease.version}\n\n${nextRelease.notes}',
       },
     ],
   ],

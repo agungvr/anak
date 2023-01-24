@@ -1,4 +1,4 @@
-const name = 'tampan-lib';
+const name = 'tampan-utils';
 const srcRoot = `packages/${name}`;
 
 module.exports = {
