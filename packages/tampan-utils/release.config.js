@@ -1,5 +1,5 @@
 /* eslint-disable no-template-curly-in-string */
-const name = 'tampan-lib';
+const name = 'tampan-utils';
 const srcRoot = `packages/${name}`;
 
 module.exports = {
