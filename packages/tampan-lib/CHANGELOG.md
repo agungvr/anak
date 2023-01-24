@@ -1,11 +1,10 @@
 # [1.1.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.0...tampan-lib-v1.1.0) (2023-01-24)
 
-
 ### Features
 
-* n ([17d8a9d](https://github.com/agungvr/nx-github-package-tampan/commit/17d8a9d8990d2f36d11d9642cf53c70da70d9fe7))
-* p ([ffc2aa4](https://github.com/agungvr/nx-github-package-tampan/commit/ffc2aa433da8d52963d69c0423cfbc8f08735bc6))
-* wew ([15531fb](https://github.com/agungvr/nx-github-package-tampan/commit/15531fb940c2ac581f2777f7b7aa7450bdd43279))
+- n ([17d8a9d](https://github.com/agungvr/nx-github-package-tampan/commit/17d8a9d8990d2f36d11d9642cf53c70da70d9fe7))
+- p ([ffc2aa4](https://github.com/agungvr/nx-github-package-tampan/commit/ffc2aa433da8d52963d69c0423cfbc8f08735bc6))
+- wew ([15531fb](https://github.com/agungvr/nx-github-package-tampan/commit/15531fb940c2ac581f2777f7b7aa7450bdd43279))
 
 # [1.1.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.0...tampan-lib-v1.1.0) (2023-01-24)
 
