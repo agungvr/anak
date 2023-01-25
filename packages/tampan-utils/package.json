@@ -1,7 +1,6 @@
 {
   "name": "@agungvr/tampan-utils",
   "version": "0.0.0-semantic-release",
-  "main": "./index.js",
   "types": "./index.d.ts",
   "repository": "https://github.com/agungvr/nx-github-package-tampan",
   "publishConfig": {
