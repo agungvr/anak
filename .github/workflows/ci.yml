@@ -81,9 +81,9 @@ jobs:
       - run: |
           npx nx workspace-lint
           npx nx format:check
-          npx nx affected --target lint --parallel 3
-          npx nx affected --target test --parallel 3 --ci --code-coverage
-          npx nx affected --target build --parallel 3
+          npx nx affected --target=lint --parallel 3
+          npx nx affected --target=test --parallel 3 --ci --code-coverage
+          npx nx affected --target=build --parallel 3
 
       - name: Release
         if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
@@ -91,5 +91,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.WEW_TOKEN }}
         run: |
-          npx nx affected --target release --base=main --head=HEAD
+          npx nx affected --target=release
           npx semantic-release-plus
