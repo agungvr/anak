@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "anak",
+  "npmScope": "agungvr",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
