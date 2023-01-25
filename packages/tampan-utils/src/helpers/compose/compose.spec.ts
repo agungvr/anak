@@ -1,7 +1,7 @@
 import { compose } from './compose';
 
 describe('compose function', () => {
-  it('should return the passed function when passed one arguments', () => {
+  it('should return the passed function when passed one argument', () => {
     const square = (x: number) => x * x;
     expect(compose(square)(3)).toEqual(9);
   });
