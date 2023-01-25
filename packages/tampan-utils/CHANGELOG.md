@@ -1,3 +1,19 @@
+# [1.1.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-utils-v1.0.1...tampan-utils-v1.1.0) (2023-01-25)
+
+
+### Bug Fixes
+
+* a ([0f01d2e](https://github.com/agungvr/nx-github-package-tampan/commit/0f01d2ee9aa609021c3ccb7aa9aa8ed8cd42cf00))
+* cc ([ee8aae5](https://github.com/agungvr/nx-github-package-tampan/commit/ee8aae55438120a183ad031de8a940459ea71bd7))
+* cc ([13f1c91](https://github.com/agungvr/nx-github-package-tampan/commit/13f1c916d23776a17628ab6f28bb479d6c083ffd))
+* l ([e9792e3](https://github.com/agungvr/nx-github-package-tampan/commit/e9792e3c0af70a6fa1e1e78f0585038ad9341e60))
+* lol ([5450690](https://github.com/agungvr/nx-github-package-tampan/commit/545069092bb3a610da2503a97fe67b32a0003381))
+
+
+### Features
+
+* update ([25fdc28](https://github.com/agungvr/nx-github-package-tampan/commit/25fdc284f9147bb3a5ae39a4b17d471ba5652c18))
+
 ## [1.0.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-utils-v1.0.0...tampan-utils-v1.0.1) (2023-01-25)
 
 
