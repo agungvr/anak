@@ -7,8 +7,8 @@ export const useNetworkCheck = (): boolean => {
     const handleOffline = () => setIsOnline(false);
     const handleOnline = () => setIsOnline(true);
 
-    window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
+    window.addEventListener('online', handleOnline);
 
     return () => {
       window.removeEventListener('online', handleOnline);
