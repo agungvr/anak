@@ -1,5 +1,6 @@
 # [1.1.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.1...tampan-lib-v1.1.0) (2023-01-26)
 
+
 ### Bug Fixes
 
 - linter ([5cbd030](https://github.com/agungvr/nx-github-package-tampan/commit/5cbd030a998d228d92d3a492fbe362c625cf259a))
