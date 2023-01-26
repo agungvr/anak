@@ -92,4 +92,4 @@ jobs:
           NPM_TOKEN: ${{ secrets.WEW_TOKEN }}
         run: |
           npx nx affected --target release
-          npx semantic-release-plus
+          npx multi-semantic-release
