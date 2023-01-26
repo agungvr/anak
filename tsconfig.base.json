@@ -18,8 +18,7 @@
       "@agungvr/eslint-config-tampan-lint": [
         "packages/eslint-config-tampan-lint/index.ts"
       ],
-      "@agungvr/tampan-lib": ["packages/tampan-lib/src/index.ts"],
-      "@agungvr/tampan-utils": ["packages/tampan-utils/src/index.ts"]
+      "@agungvr/tampan-lib": ["packages/tampan-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
