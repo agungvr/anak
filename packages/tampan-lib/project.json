@@ -9,7 +9,8 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/tampan-lib/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["packages/tampan-lib/**/*.{ts,tsx,js,jsx}"],
+        "fix": true
       }
     },
     "build": {
