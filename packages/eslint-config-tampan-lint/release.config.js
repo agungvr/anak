@@ -5,9 +5,9 @@ module.exports = {
   name,
   extends: 'release.config.base.js',
   pkgRoot: `dist/${srcRoot}`,
-  tagFormat: name + '-v${version}',
+  tagFormat: `${name}-v\${version}`,
   commitPaths: ['force-release.md', `${srcRoot}/*`],
-  assets: [`${appPath}/README.md`, `${appPath}/CHANGELOG.md`],
+  assets: [`${srcRoot}/README.md`, `${srcRoot}/CHANGELOG.md`],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
@@ -22,8 +22,7 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: [`${srcRoot}/package.json`, `${srcRoot}/CHANGELOG.md`],
-        message:
-          `release(version): Release ${name} ` + '${nextRelease.version} \n\n${nextRelease.notes}',
+        message: `release(version): Release \${name} \${nextRelease.version} \n\n\${nextRelease.notes}`,
       },
     ],
   ],
