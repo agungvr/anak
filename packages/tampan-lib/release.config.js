@@ -4,10 +4,13 @@ const name = "tampan-lib";
 const srcRoot = `packages/${name}`;
 
 module.exports = {
+  name,
   extends: "release.config.base.js",
   pkgRoot: `dist/${srcRoot}`,
   tagFormat: `${name}-v\${version}`,
-  commitPaths: [`${srcRoot}/*`],
+  commitPaths: ["force-release.md", `${srcRoot}/*`],
+  assets: [`${srcRoot}/README.md`, `${srcRoot}/CHANGELOG.md`],
+
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
