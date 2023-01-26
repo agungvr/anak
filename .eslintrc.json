@@ -46,6 +46,7 @@
             ]
           }
         ],
+        "eslint no-use-before-define": 2,
         "react/react-in-jsx-scope": "off",
         "react/function-component-definition": [
           2,
