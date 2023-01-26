@@ -1,10 +1,7 @@
-name:
+name: Release
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
+  workflow_dispatch:
 
 env:
   HUSKY: 0
@@ -86,7 +83,7 @@ jobs:
           npx nx affected --target build --parallel 3
 
       - name: Release
-        if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
+        if: ${{ success() }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.WEW_TOKEN }}
