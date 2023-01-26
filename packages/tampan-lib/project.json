@@ -3,37 +3,37 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/tampan-lib/src",
   "projectType": "library",
+  "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nrwl/js:swc",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/packages/tampan-lib",
-        "main": "packages/tampan-lib/src/index.ts",
-        "tsConfig": "packages/tampan-lib/tsconfig.lib.json",
-        "assets": ["packages/tampan-lib/*.md"]
-      }
-    },
-    "publish": {
-      "executor": "nx:run-commands",
-      "options": {
-        "command": "node tools/scripts/publish.mjs tampan-lib {args.ver} {args.tag}"
-      },
-      "dependsOn": ["build"]
-    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["packages/tampan-lib/**/*.ts"]
+        "lintFilePatterns": ["packages/tampan-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "build": {
+      "executor": "@nrwl/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/tampan-lib"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
       "outputs": ["coverage/packages/tampan-lib"],
       "options": {
-        "coverage": false,
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/tampan-lib"
       }
     },
     "release": {
@@ -44,6 +44,5 @@
         "parallel": false
       }
     }
-  },
-  "tags": []
+  }
 }
