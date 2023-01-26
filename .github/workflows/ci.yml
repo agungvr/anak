@@ -1,7 +1,9 @@
-name: Release
+name:
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 env:
   HUSKY: 0
@@ -32,6 +34,7 @@ jobs:
         with:
           token: ${{ secrets.WEW_TOKEN }}
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Nx set SHAs
         uses: nrwl/nx-set-shas@v3
@@ -83,7 +86,7 @@ jobs:
           npx nx affected --target build --parallel 3
 
       - name: Release
-        if: ${{ success() }}
+        if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.WEW_TOKEN }}
