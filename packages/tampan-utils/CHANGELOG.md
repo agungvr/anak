@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-utils-v1.1.0...tampan-utils-v1.1.1) (2023-01-25)
+
+
+### Bug Fixes
+
+* m ([bbe8399](https://github.com/agungvr/nx-github-package-tampan/commit/bbe839932f0e6f304ada6a8ebfc0881eb52a45a6))
+
 # [1.1.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-utils-v1.0.1...tampan-utils-v1.1.0) (2023-01-25)
 
 
