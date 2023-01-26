@@ -6,11 +6,5 @@
     "types": ["node"]
   },
   "include": ["**/*.ts", "**/*.js"],
-  "exclude": [
-    "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts",
-    "**/*.spec.js",
-    "**/*.test.js"
-  ]
+  "exclude": ["jest.config.ts", "**/*.spec.ts", "**/*.test.ts", "**/*.spec.js", "**/*.test.js"]
 }

@@ -1,1 +1,1 @@
-export { useNetworkCheck } from "./useNetworkCheck";
+export { useNetworkCheck } from './useNetworkCheck'
