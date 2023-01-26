@@ -1,13 +1,11 @@
-/* eslint-disable no-useless-concat */
-/* eslint-disable no-template-curly-in-string */
-const name = 'tampan-lib'
-const srcRoot = `packages/${name}`
+const appName = 'tampan-lib'
+const srcRoot = `packages/${appName}`
 
 module.exports = {
-  name,
+  name: appName,
   extends: 'release.config.base.js',
   pkgRoot: `dist/${srcRoot}`,
-  tagFormat: `${name}-v\${version}`,
+  tagFormat: `${appName}-v\${version}`,
   commitPaths: ['force-release.md', `${srcRoot}/*`],
   assets: [`${srcRoot}/README.md`, `${srcRoot}/CHANGELOG.md`],
 
@@ -25,8 +23,7 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: [`${srcRoot}/package.json`, `${srcRoot}/CHANGELOG.md`],
-        message:
-          `release(version): Release ${name} ` + '${nextRelease.version} \n\n${nextRelease.notes}',
+        message: `release(version): Release \${appName} \${nextRelease.version} \n\n\${nextRelease.notes}`,
       },
     ],
   ],
