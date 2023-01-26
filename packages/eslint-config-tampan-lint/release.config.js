@@ -1,11 +1,11 @@
-const name = 'eslint-config-tampan-lint'
-const srcRoot = `packages/${name}`
+const appName = 'eslint-config-tampan-lint'
+const srcRoot = `packages/${appName}`
 
 module.exports = {
-  name,
+  name: appName,
   extends: 'release.config.base.js',
   pkgRoot: `dist/${srcRoot}`,
-  tagFormat: `${name}-v\${version}`,
+  tagFormat: `${appName}-v\${version}`,
   commitPaths: ['force-release.md', `${srcRoot}/*`],
   assets: [`${srcRoot}/README.md`, `${srcRoot}/CHANGELOG.md`],
   plugins: [
@@ -22,7 +22,7 @@ module.exports = {
       '@semantic-release/git',
       {
         assets: [`${srcRoot}/package.json`, `${srcRoot}/CHANGELOG.md`],
-        message: `release(version): Release \${name} \${nextRelease.version} \n\n\${nextRelease.notes}`,
+        message: `release(version): Release \${appName} \${nextRelease.version} \n\n\${nextRelease.notes}`,
       },
     ],
   ],
