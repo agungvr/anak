@@ -4,5 +4,6 @@ module.exports = {
     'nx affected --target lint --uncommitted --fix --parallel',
     'nx affected --target test --uncommitted',
     'nx format:write --uncommitted --libs-and-apps',
+    'git add .',
   ],
 }
