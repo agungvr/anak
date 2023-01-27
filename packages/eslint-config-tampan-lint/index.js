@@ -65,11 +65,11 @@ module.exports = {
         leadingUnderscore: 'allowSingleOrDouble',
       },
     ],
+    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',
       { ignoreRestSiblings: true, argsIgnorePattern: '^_' },
     ],
-    'react/react-in-jsx-scope': 'off',
     'react/function-component-definition': [
       2,
       {
