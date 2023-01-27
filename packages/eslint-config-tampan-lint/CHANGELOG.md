@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/agungvr/nx-github-package-tampan/compare/eslint-config-tampan-lint-v1.0.0...eslint-config-tampan-lint-v1.0.1) (2023-01-27)
+
+
+### Bug Fixes
+
+* wew ([386f6ba](https://github.com/agungvr/nx-github-package-tampan/commit/386f6bab0f2361e709e1309d9a09778fe1a8d3a5))
+* wew ([6471433](https://github.com/agungvr/nx-github-package-tampan/commit/64714331761c09855a7f9875d35cbc501fe74e8a))
+
 # 1.0.0 (2023-01-27)
 
 
