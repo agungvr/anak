@@ -1783,6 +1783,17 @@
   dependencies:
     nx "15.6.0"
 
+"@nrwl/devkit@14.3.6":
+  version "14.3.6"
+  resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-14.3.6.tgz#40b9712e672438bd7a7b6ebbb7367fa68ec5fcc3"
+  integrity sha512-yGAZ5emBSb13smdkVagJRD/IC+ZkGLuRUc9A4Oqp/hDtOoUx6Jxot6vKwniTfbYZlk1Dkeq77d3atsEwz0dD1A==
+  dependencies:
+    ejs "^3.1.7"
+    ignore "^5.0.4"
+    rxjs "^6.5.4"
+    semver "7.3.4"
+    tslib "^2.3.0"
+
 "@nrwl/devkit@15.6.0":
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/@nrwl/devkit/-/devkit-15.6.0.tgz#80649a97445a2620a3f0cb19d88972770205e2c6"
@@ -2117,7 +2128,7 @@
     colors "~1.2.1"
     string-argv "~0.3.1"
 
-"@semantic-release/changelog@^6.0.0":
+"@semantic-release/changelog@^6.0.0", "@semantic-release/changelog@^6.0.1":
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/@semantic-release/changelog/-/changelog-6.0.2.tgz#fdcdbd368788c8fcc69c4af29bf2064f4afb45f4"
   integrity sha512-jHqfTkoPbDEOAgAP18mGP53IxeMwxTISN+GwTRy9uLu58UjARoZU8ScCgWGeO2WPkEsm57H8AkyY02W2ntIlIw==
@@ -2145,7 +2156,19 @@
   resolved "https://registry.yarnpkg.com/@semantic-release/error/-/error-3.0.0.tgz#30a3b97bbb5844d695eb22f9d3aa40f6a92770c2"
   integrity sha512-5hiM4Un+tpl4cKw3lV4UgzJj+SmfNIDCLLw0TepzQxz9ZGV5ixnqkzIVF+3tp0ZHgcMKE+VNGHJjEeyFG2dcSw==
 
-"@semantic-release/git@^10.0.0":
+"@semantic-release/exec@^6.0.2":
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/@semantic-release/exec/-/exec-6.0.3.tgz#d212fdf19633bdfb553de6cb6c7f8781933224db"
+  integrity sha512-bxAq8vLOw76aV89vxxICecEa8jfaWwYITw6X74zzlO0mc/Bgieqx9kBRz9z96pHectiTAtsCwsQcUyLYWnp3VQ==
+  dependencies:
+    "@semantic-release/error" "^3.0.0"
+    aggregate-error "^3.0.0"
+    debug "^4.0.0"
+    execa "^5.0.0"
+    lodash "^4.17.4"
+    parse-json "^5.0.0"
+
+"@semantic-release/git@^10.0.0", "@semantic-release/git@^10.0.1":
   version "10.0.1"
   resolved "https://registry.yarnpkg.com/@semantic-release/git/-/git-10.0.1.tgz#c646e55d67fae623875bf3a06a634dd434904498"
   integrity sha512-eWrx5KguUcU2wUPaO6sfvZI0wPafUKAMNC18aXY4EnNcrZL86dEmpNVnC9uMpGZkmZJ9EfCVJBQx4pV4EMGT1w==
@@ -2159,7 +2182,7 @@
     micromatch "^4.0.0"
     p-reduce "^2.0.0"
 
-"@semantic-release/github@^8.0.0", "@semantic-release/github@^8.0.1":
+"@semantic-release/github@^8.0.0", "@semantic-release/github@^8.0.1", "@semantic-release/github@^8.0.2":
   version "8.0.7"
   resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-8.0.7.tgz#643aee7a5cdd2acd3ae643bb90ad4ac796901de6"
   integrity sha512-VtgicRIKGvmTHwm//iqTh/5NGQwsncOMR5vQK9pMT92Aem7dv37JFKKRuulUsAnUOIlO4G8wH3gPiBAA0iW0ww==
@@ -2181,7 +2204,7 @@
     p-retry "^4.0.0"
     url-join "^4.0.0"
 
-"@semantic-release/npm@^8.0.0":
+"@semantic-release/npm@^8.0.0", "@semantic-release/npm@^8.0.3":
   version "8.0.3"
   resolved "https://registry.yarnpkg.com/@semantic-release/npm/-/npm-8.0.3.tgz#69378ce529bbd263aa8fc899b2d0f874114e0302"
   integrity sha512-Qbg7x/O1t3sJqsv2+U0AL4Utgi/ymlCiUdt67Ftz9HL9N8aDML4t2tE0T9MBaYdqwD976hz57DqHHXKVppUBoA==
@@ -2355,6 +2378,22 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^8.5.0"
     "@types/react-dom" "^18.0.0"
+
+"@theunderscorer/nx-semantic-release@^1.14.0":
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/@theunderscorer/nx-semantic-release/-/nx-semantic-release-1.14.0.tgz#e9343b236dfede2b79ad0d64008937369a891ad2"
+  integrity sha512-Nqw8KzJUoE1zAGKsxR3mGNKHsvByQ/XBDBcJD7HbTZ6Ovori6S7irQEvgaqq2yvve3VJADbcH/P+kgFKrd72wA==
+  dependencies:
+    "@nrwl/devkit" "14.3.6"
+    "@semantic-release/changelog" "^6.0.1"
+    "@semantic-release/exec" "^6.0.2"
+    "@semantic-release/git" "^10.0.1"
+    "@semantic-release/github" "^8.0.2"
+    "@semantic-release/npm" "^8.0.3"
+    cosmiconfig "^7.0.1"
+    remeda "^0.0.32"
+    semantic-release "19.0.3"
+    semantic-release-plugin-decorators "3.0.1"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -9034,6 +9073,11 @@ regjsparser@^0.9.1:
   dependencies:
     jsesc "~0.5.0"
 
+remeda@^0.0.32:
+  version "0.0.32"
+  resolved "https://registry.yarnpkg.com/remeda/-/remeda-0.0.32.tgz#668e5d3b8a5c9edb1a19f33d5df805dd1e7d299c"
+  integrity sha512-FEdl8ONpqY7AvvMHG5WYdomc0mGf2khHPUDu6QvNkOq4Wjkw5BvzWM4QyksAQ/US1sFIIRG8TVBn6iJx6HbRrA==
+
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
@@ -9279,10 +9323,49 @@ semantic-release-npm-github-publish@^1.5.4:
     semantic-release "^19.0.0"
     snyk "^1.720.0"
 
+semantic-release-plugin-decorators@3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/semantic-release-plugin-decorators/-/semantic-release-plugin-decorators-3.0.1.tgz#961b5fec7e1ab113aa10aed5256ee7c3ee6804d9"
+  integrity sha512-f5Qjvv/AJYByvkaj11a+05gQwfPwgQKo5OIhj8YVM2Dhf2rOPEOLD83jGrTdM7Nuf//sZYw77/cGUSVygUG9Kg==
+
 semantic-release-plus@^20.0.0:
   version "20.0.0"
   resolved "https://registry.yarnpkg.com/semantic-release-plus/-/semantic-release-plus-20.0.0.tgz#6fce8ae5dc6a748017217285aff43a304f280d41"
   integrity sha512-WJdW3ZeTSZVaAPkae4lroDtuYFdPiOFHFxSDEIdyw8NSLpgMKBYPyGo8UM+3SbfE1IaKJ9zfy6EkiJLmJoTzOQ==
+  dependencies:
+    "@semantic-release/commit-analyzer" "^9.0.2"
+    "@semantic-release/error" "^3.0.0"
+    "@semantic-release/github" "^8.0.0"
+    "@semantic-release/npm" "^9.0.0"
+    "@semantic-release/release-notes-generator" "^10.0.0"
+    aggregate-error "^3.0.0"
+    cosmiconfig "^7.0.0"
+    debug "^4.0.0"
+    env-ci "^5.0.0"
+    execa "^5.0.0"
+    figures "^3.0.0"
+    find-versions "^4.0.0"
+    get-stream "^6.0.0"
+    git-log-parser "^1.2.0"
+    hook-std "^2.0.0"
+    hosted-git-info "^4.0.0"
+    lodash "^4.17.21"
+    marked "^4.0.10"
+    marked-terminal "^5.0.0"
+    micromatch "^4.0.2"
+    p-each-series "^2.1.0"
+    p-reduce "^2.0.0"
+    read-pkg-up "^7.0.0"
+    resolve-from "^5.0.0"
+    semver "^7.3.2"
+    semver-diff "^3.1.1"
+    signale "^1.2.1"
+    yargs "^16.2.0"
+
+semantic-release@19.0.3:
+  version "19.0.3"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-19.0.3.tgz#9291053ad9890052f28e7c5921d4741530d516fd"
+  integrity sha512-HaFbydST1cDKZHuFZxB8DTrBLJVK/AnDExpK0s3EqLIAAUAHUgnd+VSJCUtTYQKkAkauL8G9CucODrVCc7BuAA==
   dependencies:
     "@semantic-release/commit-analyzer" "^9.0.2"
     "@semantic-release/error" "^3.0.0"
