@@ -14,6 +14,14 @@
         "assets": ["packages/eslint-config-tampan-lint/*.md"]
       }
     },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/tampan-lib/**/*.{ts,tsx,js,jsx}"],
+        "fix": true
+      }
+    },
     "publish": {
       "executor": "nx:run-commands",
       "options": {
