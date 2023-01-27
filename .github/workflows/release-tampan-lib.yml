@@ -79,9 +79,9 @@ jobs:
       - run: |
           npx nx workspace-lint
           npx nx format:write
-          npx nx affected --target lint --parallel 3
-          npx nx affected --target test --parallel 3 --ci --code-coverage
-          npx nx affected --target build --parallel 3
+          npx nx run tampan-lib:lint --parallel 3
+          npx nx test tampan-lib --parallel 3 --ci --code-coverage
+          npx nx build tampan-lib --parallel 3
 
       - name: Release
         if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
