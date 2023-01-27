@@ -1,9 +1,7 @@
-name: Release
+name: Release Eslint Config Tampan Lint
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 env:
   HUSKY: 0
@@ -91,5 +89,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.WEW_TOKEN }}
           NPM_TOKEN: ${{ secrets.WEW_TOKEN }}
         run: |
-          npx nx affected --target release
+          npx nx run eslint-config-tampan-lint:release
           npx semantic-release
