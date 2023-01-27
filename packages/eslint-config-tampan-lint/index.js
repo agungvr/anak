@@ -65,7 +65,6 @@ module.exports = {
         leadingUnderscore: 'allowSingleOrDouble',
       },
     ],
-    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/no-unused-vars': [
       'warn',
       { ignoreRestSiblings: true, argsIgnorePattern: '^_' },
@@ -77,7 +76,6 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
-    'react/display-name': 'off',
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
@@ -87,6 +85,8 @@ module.exports = {
     '@typescript-eslint/default-param-last': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/display-name': 'off',
     'react/jsx-filename-extension': [
       1,
       {
