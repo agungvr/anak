@@ -86,13 +86,13 @@ module.exports = {
     '@typescript-eslint/no-unsafe-member-access': 'off',
     '@typescript-eslint/default-param-last': 'off',
     '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/jsx-filename-extension': [
       1,
       {
         extensions: ['.tsx'],
       },
     ],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'no-console': 'warn',
     'no-param-reassign': [
       'error',
