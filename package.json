@@ -50,6 +50,7 @@
     "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sonarjs": "^0.18.0",
+    "full-icu": "^1.5.0",
     "husky": "^8.0.0",
     "jsdom": "~20.0.3",
     "lint-staged": "^13.1.0",
@@ -63,10 +64,11 @@
     "vite": "^4.0.1",
     "vite-plugin-dts": "~1.7.1",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-tsconfig-paths": "^4.0.2",
-    "vitest": "^0.25.8"
+    "vite-tsconfig-paths": "^4.0.2"
   },
   "dependencies": {
+    "blob-util": "^2.0.2",
+    "immer": "^9.0.18",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }

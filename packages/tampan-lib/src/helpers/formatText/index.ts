@@ -1,0 +1,1 @@
+export { capitalizeFirstChar } from './formatText'

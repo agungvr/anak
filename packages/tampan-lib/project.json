@@ -34,7 +34,7 @@
       "outputs": ["coverage/packages/tampan-lib"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/packages/tampan-lib"
+        "coverage": true
       }
     },
     "release": {

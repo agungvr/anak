@@ -34,7 +34,7 @@ export default defineConfig({
   build: {
     lib: {
       // Could also be a dictionary or array of multiple entry points.
-      entry: 'src/index.ts',
+      entry: ['index.ts'],
       name: 'tampan-lib',
       fileName: 'index',
       // Change this to the formats you want to support.
