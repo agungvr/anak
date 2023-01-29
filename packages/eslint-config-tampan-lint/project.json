@@ -7,11 +7,10 @@
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/packages/eslint-config-tampan-lint",
-        "main": "packages/eslint-config-tampan-lint/index.js",
-        "tsConfig": "packages/eslint-config-tampan-lint/tsconfig.lib.json",
-        "assets": ["packages/eslint-config-tampan-lint/*.md"]
+        "main": "packages/eslint-config-tampan-lint/index.js"
       }
     },
     "lint": {

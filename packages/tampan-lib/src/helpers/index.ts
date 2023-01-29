@@ -1,1 +1,7 @@
 export { compose } from './compose'
+export { downloadFileUrl } from './downloadFile'
+export { formatIDR } from './formatIDR'
+export { capitalizeFirstChar } from './formatText'
+export { getBase64Image } from './getBase64Image'
+export { queryObjToString, queryStringToObj } from './queryParams'
+export { isEmail, isPhoneNumber, isValidURL } from './validation'
