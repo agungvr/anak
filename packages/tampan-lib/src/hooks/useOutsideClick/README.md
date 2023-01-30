@@ -39,10 +39,7 @@ Make sure to wrap your element with the ref.
 ## Example
 
 ```ts
-import React, { useRef } from 'react';
-import { useOutsideClick } from '@agungvr/useOutsideClick';
-
-function MyComponent() {
+const MyComponent = () => {
   const ref = useRef(null);
 
   useOutsideClick(ref, () => {

@@ -4,7 +4,8 @@
   "type": "commonjs",
   "repository": "https://github.com/agungvr/nx-github-package-tampan",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org/",
+    "tag": "latest"
   },
   "exports": {
     ".": {

@@ -5,10 +5,7 @@ A custom React hook for debouncing a value with a specified delay.
 ## Usage
 
 ```ts
-import { useState } from 'react';
-import { useDebounce } from 'use-debounce-hook';
-
-function SearchInput() {
+const SearchInput = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
