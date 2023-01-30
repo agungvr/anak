@@ -5,18 +5,15 @@ This hook allows you to debounce any value changes, for example when you want to
 # Usage
 
 ```ts
-import { useDebounceInput } from '@agungvr/tampan-lib'
-
-
 const [search, handleSearch] = useDebounceInput({
     onChange: (value) => dispatch(...),
 })
 
 <TextField
-    placeholder="Cari SKU / Nama Produk"
-    value={search}
-    onChange={(e) => handleSearch(e.target.value)}
-    />
+  placeholder="Cari SKU / Nama Produk"
+  value={search}
+  onChange={(e) => handleSearch(e.target.value)}
+  />
 ```
 
 ## API

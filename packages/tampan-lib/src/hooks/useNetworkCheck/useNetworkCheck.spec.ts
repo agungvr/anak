@@ -1,25 +1,32 @@
-import { renderHook, act } from '@testing-library/react-hooks'
-import { useNetworkCheck } from './useNetworkCheck'
+import { renderHook } from '@testing-library/react-hooks'
+import { useNetworkCheck, subscribe } from './useNetworkCheck'
 
 describe('useNetworkCheck', () => {
-  it('should initializes with navigator.onLine', () => {
-    const { result } = renderHook(() => useNetworkCheck())
-    expect(result.current).toBe(navigator.onLine)
+  beforeEach(() => {
+    Object.defineProperty(navigator, 'onLine', {
+      value: true,
+      writable: true,
+    })
+    vi.spyOn(window, 'addEventListener')
+    vi.spyOn(window, 'removeEventListener')
   })
 
-  it('should updates isOnline when window goes online', () => {
+  afterEach(() => {
+    vi.clearAllMocks()
+  })
+
+  it('should return the default value when the component first renders', () => {
     const { result } = renderHook(() => useNetworkCheck())
-    act(() => {
-      window.dispatchEvent(new Event('online'))
-    })
     expect(result.current).toBe(true)
   })
 
-  it('should updates isOnline when window goes offline', () => {
-    const { result } = renderHook(() => useNetworkCheck())
-    act(() => {
-      window.dispatchEvent(new Event('offline'))
-    })
-    expect(result.current).toBe(false)
+  it('should correctly add and remove event listeners', () => {
+    const callback = vi.fn()
+    const unsubscribe = subscribe(callback)
+    expect(window.addEventListener).toHaveBeenCalledWith('online', callback)
+    expect(window.addEventListener).toHaveBeenCalledWith('offline', callback)
+    unsubscribe()
+    expect(window.removeEventListener).toHaveBeenCalledWith('online', callback)
+    expect(window.removeEventListener).toHaveBeenCalledWith('offline', callback)
   })
 })

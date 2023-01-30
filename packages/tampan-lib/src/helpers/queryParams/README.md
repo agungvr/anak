@@ -51,9 +51,9 @@ console.log(user) // { name: "Bob", age: 35 }
 ## getParamsFromUrl
 
 ```ts
-const obj = { a: 1, b: 2, c: 3 };
-const removedObj = removeObjFromArray(obj, ['a', 'c']);
-console.log(removedObj); // { b: 2 }
+const url = 'https://www.example.com/path?param1=value1&param2=false'
+const params = getParamsFromUrl(url)
+console.log(params); // { param1: value, param2: false }
 ```
 
 ## queryParamsURL

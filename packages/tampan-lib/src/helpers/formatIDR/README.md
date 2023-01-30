@@ -5,8 +5,6 @@ This module exports a single function formatIDR that takes a number and returns 
 ## Usage
 
 ```ts
-import { formatIDR } from '@agungvr/tampan-lib';
-
 console.log(formatIDR(1000)); // "Rp 10.000"
 console.log(formatIDR(123456789)); // "Rp 1.234.567"
 ```
