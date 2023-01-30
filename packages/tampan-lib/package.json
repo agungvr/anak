@@ -1,11 +1,11 @@
 {
-  "name": "@agungvr/tampan-lib",
+  "name": "@anaktampan/tampan-lib",
   "version": "0.0.0-semantic-release",
   "main": "./index.js",
   "types": "./index.d.ts",
   "repository": "https://github.com/agungvr/nx-github-package-tampan",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
+    "@anaktampan/registry": "https://registry.npmjs.org/",
     "tag": "latest"
   },
   "exports": {
