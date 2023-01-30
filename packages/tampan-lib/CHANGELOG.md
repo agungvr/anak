@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.0...tampan-lib-v1.1.0) (2023-01-30)
+
+
+### Features
+
+* feat tampan ([c57397a](https://github.com/agungvr/nx-github-package-tampan/commit/c57397a0f7a240098cff8755a6ed600d8945ccf2))
+
 # 1.0.0 (2023-01-30)
 
 
