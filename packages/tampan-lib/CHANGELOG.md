@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.0...tampan-lib-v1.2.0) (2023-01-30)
+
+
+### Features
+
+* wew ([659d183](https://github.com/agungvr/nx-github-package-tampan/commit/659d1837b5d2f0bb8b57d38e5cda67beb36825b5))
+
 # [1.1.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.0...tampan-lib-v1.1.0) (2023-01-30)
 
 
