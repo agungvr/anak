@@ -86,7 +86,7 @@ jobs:
         if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
         env:
           GITHUB_TOKEN: ${{ secrets.WEW_TOKEN }}
-          NPM_TOKEN: ${{ secrets.WEW_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
         run: |
           npx nx run eslint-config-tampan-lint:release
           npx semantic-release
