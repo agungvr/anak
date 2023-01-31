@@ -1,5 +1,5 @@
 {
-  "name": "@anaktampan/eslint-config-tampan-lint",
+  "name": "eslint-config-tampan-lint",
   "version": "0.0.0-semantic-release",
   "type": "commonjs",
   "repository": "https://github.com/agungvr/nx-github-package-tampan",

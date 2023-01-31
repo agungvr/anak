@@ -2,6 +2,33 @@
 
 ## Usage 
 
+### isEqual
+
+isEqual(a: unknown, b: unknown): boolean
+
+```ts
+let obj1 = {a: 1, b: {c: 2}};
+let obj2 = {a: 1, b: {c: 2}};
+let obj3 = {a: 1, b: {c: 3}};
+
+console.log(fastEquals(obj1, obj2)); // true
+console.log(fastEquals(obj1, obj3)); // false
+
+let arr1 = [1, 2, 3];
+let arr2 = [1, 2, 3];
+let arr3 = [3, 2, 1];
+
+console.log(fastEquals(arr1, arr2)); // true
+console.log(fastEquals(arr1, arr3)); // false
+
+let num1 = 42;
+let num2 = 42;
+let num3 = 84;
+
+console.log(fastEquals(num1, num2)); // true
+console.log(fastEquals(num1, num3)); // false
+```
+
 
 
 ### - isPhoneNumber

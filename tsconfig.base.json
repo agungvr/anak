@@ -16,8 +16,8 @@
     "baseUrl": ".",
     "allowJs": true,
     "paths": {
-      "@agungvr/eslint-config-tampan-lint": ["packages/eslint-config-tampan-lint/index.ts"],
-      "@agungvr/tampan-lib": ["packages/tampan-lib/src/index.ts"]
+      "@agungvr/tampan-lib": ["packages/tampan-lib/src/index.ts"],
+      "eslint-config-tampan-lint": ["packages/eslint-config-tampan-lint/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

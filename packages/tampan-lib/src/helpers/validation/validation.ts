@@ -1,4 +1,8 @@
 /* eslint-disable no-new */
+import { deepEqual } from 'fast-equals'
+
+export const isEqual = (a: unknown, b: unknown): boolean => deepEqual(a, b)
+
 export const isPhoneNumber = (phoneNumber: string, pattern = /^(\+62|62|08)(\d{9,12})$/g) =>
   pattern.test(phoneNumber)
 

@@ -10,7 +10,9 @@
       "defaultConfiguration": "production",
       "options": {
         "outputPath": "dist/packages/eslint-config-tampan-lint",
-        "main": "packages/eslint-config-tampan-lint/index.js"
+        "tsConfig": "packages/eslint-config-tampan-lint/tsconfig.lib.json",
+        "main": "packages/eslint-config-tampan-lint/index.js",
+        "assets": ["packages/eslint-config-tampan-lint/*.md"]
       }
     },
     "lint": {

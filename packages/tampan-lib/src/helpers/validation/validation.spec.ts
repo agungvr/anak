@@ -1,4 +1,4 @@
-import { isPhoneNumber, isEmail, isValidURL } from './validation'
+import { isPhoneNumber, isEmail, isValidURL, isEqual } from './validation'
 
 describe('isPhoneNumber', () => {
   it('should return true for valid phone numbers', () => {
@@ -45,5 +45,39 @@ describe('isValidURL', () => {
 
   it('should return true for a valid URL with ftp protocol', () => {
     expect(isValidURL('ftp://ftp.example.com')).toBe(true)
+  })
+})
+
+describe('isEqual', () => {
+  it('should return true for equal primitive values', () => {
+    expect(isEqual(1, 1)).toBe(true)
+    expect(isEqual('hello', 'hello')).toBe(true)
+    expect(isEqual(true, true)).toBe(true)
+  })
+
+  it('should return false for unequal primitive values', () => {
+    expect(isEqual(1, 2)).toBe(false)
+    expect(isEqual('hello', 'Hello')).toBe(false)
+    expect(isEqual(true, false)).toBe(false)
+  })
+
+  it('should return true for equal objects', () => {
+    expect(isEqual({ a: 1, b: 2 }, { a: 1, b: 2 })).toBe(true)
+    expect(isEqual({ a: { b: 1 } }, { a: { b: 1 } })).toBe(true)
+  })
+
+  it('should return false for unequal objects', () => {
+    expect(isEqual({ a: 1, b: 2 }, { a: 1, b: 3 })).toBe(false)
+    expect(isEqual({ a: { b: 1 } }, { a: { b: 2 } })).toBe(false)
+  })
+
+  it('should return true for equal arrays', () => {
+    expect(isEqual([1, 2, 3], [1, 2, 3])).toBe(true)
+    expect(isEqual([{ a: 1 }], [{ a: 1 }])).toBe(true)
+  })
+
+  it('should return false for unequal arrays', () => {
+    expect(isEqual([1, 2, 3], [1, 2, 4])).toBe(false)
+    expect(isEqual([{ a: 1 }], [{ a: 2 }])).toBe(false)
   })
 })
