@@ -3,7 +3,7 @@ import { useDebounce } from './useDebounce'
 
 describe('useDebounce', () => {
   it('should return the debounced value', async () => {
-    const delay = 1000
+    const delay = 100
     let value = 'initial'
     const { result, rerender } = renderHook(() => useDebounce(value, delay), {
       initialProps: value,
