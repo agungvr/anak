@@ -1,0 +1,92 @@
+name: Release Eslint Config Tampan Lint
+
+on:
+  workflow_dispatch:
+
+env:
+  HUSKY: 0
+
+jobs:
+  main:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ${{ github.workspace }}
+    strategy:
+      matrix:
+        node-version: [16]
+        yarn-version: ['1.22.x']
+    steps:
+      - name: Checkout [Pull Request]
+        uses: actions/checkout@v3
+        if: ${{ github.event_name == 'pull_request' }}
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          token: ${{ secrets.WEW_TOKEN }}
+          fetch-depth: 0
+
+      - name: Checkout [Default Branch]
+        uses: actions/checkout@v3
+        if: ${{ github.event_name != 'pull_request' }}
+        with:
+          token: ${{ secrets.WEW_TOKEN }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Nx set SHAs
+        uses: nrwl/nx-set-shas@v3
+
+      - name: Detect package manager
+        id: package_manager
+        run: |
+          echo "name=$([[ -f ./yarn.lock ]] && echo "yarn")" >> $GITHUB_OUTPUT
+
+      - name: Set node/yarn versions using volta
+        uses: volta-cli/action@v4
+        with:
+          node-version: '${{ matrix.node-version }}'
+          yarn-version: '${{ matrix.yarn-version }}'
+
+      - name: Print node/yarn versions
+        id: versions
+        run: |
+          node_ver=$( node --version )
+          yarn_ver=$( yarn --version || true )
+          echo "Node: ${node_ver:1}"
+          if [[ $yarn_ver != '' ]]; then echo "Yarn: $yarn_ver"; fi
+          echo "node_version=${node_ver:1}" >> $GITHUB_OUTPUT
+
+      - name: Get yarn cache directory path
+        if: steps.package_manager.outputs.name == 'yarn'
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Use the node_modules cache if available [yarn]
+        if: steps.package_manager.outputs.name == 'yarn'
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ steps.versions.outputs.node_version }}-
+
+      - name: Install dependencies
+        run: |
+          echo "Running yarn install --frozen-lockfile"
+          yarn install --frozen-lockfile
+
+      - run: |
+          npx nx workspace-lint
+          npx nx format:write
+          npx nx run eslint-config-tampan-lint:lint --parallel 3
+          npx nx build eslint-config-tampan-lint --parallel 3
+
+      - name: Release
+        if: ${{ success() && (github.event_name != 'pull_request' || github.event.action == 'closed' && github.event.pull_request.merged == true) }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.WEW_TOKEN }}
+          NPM_TOKEN: ${{ secrets.WEW_TOKEN }}
+        run: |
+          npx nx run eslint-config-tampan-lint:release
+          npx semantic-release

@@ -1,0 +1,24 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "paths": {
+      "@agungvr/tampan-lib": ["packages/tampan-lib/src/index.ts"],
+      "eslint-config-tampan-lint": ["packages/eslint-config-tampan-lint/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

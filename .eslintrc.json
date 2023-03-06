@@ -1,0 +1,156 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "plugins": [
+    "@nrwl/nx",
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "sonarjs",
+    "prettier",
+    "jest"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
+        ],
+        "react/react-in-jsx-scope": "off",
+        "react/function-component-definition": [
+          2,
+          {
+            "namedComponents": "arrow-function",
+            "unnamedComponents": "arrow-function"
+          }
+        ],
+        "react/display-name": "off",
+        "react/jsx-filename-extension": [
+          1,
+          {
+            "extensions": [".tsx"]
+          }
+        ],
+        "no-console": "warn",
+        "no-param-reassign": [
+          "error",
+          {
+            "ignorePropertyModificationsFor": ["state"],
+            "props": true
+          }
+        ],
+        "no-unused-vars": "off",
+        "camelcase": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
+        "semi": "off",
+        "arrow-body-style": ["error", "as-needed"],
+        "no-use-before-define": "off",
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "import/prefer-default-export": "off",
+        "comma-dangle": "off",
+        "quotes": "off",
+        "operator-linebreak": "off",
+        "implicit-arrow-linebreak": "off",
+        "no-confusing-arrow": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "no-restricted-exports": ["off", { "restrictedNamedExports": ["default"] }],
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
+      "rules": {
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "typeLike",
+            "format": ["PascalCase"],
+            "suffix": ["Interface", "Type", "Enum", "PropsType"]
+          },
+          {
+            "selector": "typeParameter",
+            "format": ["PascalCase"],
+            "suffix": []
+          },
+          {
+            "selector": "property",
+            "format": ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"],
+            "filter": {
+              "regex": "(^(aria-))",
+              "match": false
+            }
+          },
+          {
+            "selector": "variableLike",
+            "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"]
+          },
+          {
+            "selector": "parameter",
+            "format": ["camelCase", "UPPER_CASE", "PascalCase", "snake_case"],
+            "leadingUnderscore": "allowSingleOrDouble"
+          }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          { "ignoreRestSiblings": true, "argsIgnorePattern": "^_" }
+        ],
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-unsafe-argument": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
+        "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/default-param-last": "off",
+        "@typescript-eslint/no-floating-promises": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+      }
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.base.json"
+  }
+}
