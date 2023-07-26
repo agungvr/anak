@@ -40,7 +40,6 @@ export type DateFormatType =
   | 'dddd, DD MMM YYYY, HH:mm'
   | 'DD MMMM YYYY - HH:mm'
   | 'HH:mm:ss'
-  | 'DD/MM/YYYY HH:mm'
 
 type DateType = Date | Dayjs | undefined
 type LocaleType = 'en' | 'id'
