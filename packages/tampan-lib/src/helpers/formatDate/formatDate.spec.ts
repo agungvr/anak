@@ -90,8 +90,8 @@ describe('dateManipulation', () => {
     const date = dayjs()
     const number = 7
     const addBy = 'hour'
-    const result = dateManipulation(date).add(number, addBy).toString()
-    expect(result).toEqual(dayjs(date).add(number, addBy).toString())
+    const result = dateManipulation(date).add(number, addBy)
+    expect(result).toEqual(date.add(number, addBy))
   })
 })
 
@@ -107,33 +107,35 @@ describe('getMondayAndSundayInOneWeekDate', () => {
   it('should return a date object with the start and end dates of a week that starts on Monday and ends on Sunday', () => {
     const startDate = dayjs('2022-06-20')
     const result = getMondayAndSundayInOneWeekDate({ startDate })
-    expect(result).toEqual({
+    const expectedResult = {
       startDate: dayjs('2022-06-20').toDate(),
       endDate: dayjs('2022-06-26').toDate(),
-    })
+    }
+    expect(result).toEqual(expectedResult)
   })
 })
 
 describe('getMonthListStartFromThisMonth', () => {
-  it('should return a list of months, starting from the current month, in the specified format and locale', () => {
+  it('should return a list of months, starting from the current month, in the specified format', () => {
     const startDate = dayjs()
     const lengthOfList = 3
     const format = 'MMMM, YYYY'
     const result = getMonthListStartFromThisMonth({ startDate, lengthOfList, format })
-    expect(result).toEqual([
+    const expectedResult = [
       {
-        formatedDate: dayjs().format('MMMM, YYYY'),
-        date: dayjs(),
+        formatedDate: startDate.format('MMMM, YYYY'),
+        date: startDate,
       },
       {
-        formatedDate: dayjs().add(1, 'month').format('MMMM, YYYY'),
-        date: dayjs().add(1, 'month'),
+        formatedDate: startDate.add(1, 'month').format('MMMM, YYYY'),
+        date: startDate.add(1, 'month'),
       },
       {
-        formatedDate: dayjs().add(2, 'month').format('MMMM, YYYY'),
-        date: dayjs().add(2, 'month'),
+        formatedDate: startDate.add(2, 'month').format('MMMM, YYYY'),
+        date: startDate.add(2, 'month'),
       },
-    ])
+    ]
+    expect(result).toEqual(expectedResult)
   })
 })
 

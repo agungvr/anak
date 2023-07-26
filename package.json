@@ -8,7 +8,11 @@
   "private": true,
   "release": {
     "branches": [
-      "main"
+      "main",
+      {
+        "name": "beta",
+        "prerelease": true
+      }
     ]
   },
   "devDependencies": {
