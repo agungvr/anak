@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.0-beta.1...tampan-lib-v1.0.0-beta.2) (2023-07-26)
+
+
+### Features
+
+* update format date ([784e200](https://github.com/agungvr/nx-github-package-tampan/commit/784e200437513d2fa33219de1c4a88ff45845046))
+
 # 1.0.0-beta.1 (2023-07-26)
 
 
