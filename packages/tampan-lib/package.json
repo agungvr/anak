@@ -9,7 +9,7 @@
   },
   "exports": {
     ".": {
-      "import": "./index.mjs",
+      "import": "./index.ts",
       "require": "./index.js"
     }
   }
