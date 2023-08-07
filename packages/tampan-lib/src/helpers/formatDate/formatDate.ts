@@ -9,7 +9,6 @@ dayjs.extend(isSameOrBeforeExtended)
 dayjs.extend(customParseFormat)
 dayjs.extend(dayjsUtc)
 
-/** you can add more of format date from here https://day.js.org/docs/en/display/format */
 export type DateFormatType =
   | 'DD/MM/YYYY'
   | 'DD/MM/YY'
