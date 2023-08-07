@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.0...tampan-lib-v1.0.1) (2023-08-07)
+
+
+### Bug Fixes
+
+* remove comment ([#44](https://github.com/agungvr/nx-github-package-tampan/issues/44)) ([03c43e1](https://github.com/agungvr/nx-github-package-tampan/commit/03c43e1bf191d41089af92730c6bd87bf513fa47))
+
 # 1.0.0 (2023-07-26)
 
 
