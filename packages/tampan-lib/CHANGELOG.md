@@ -1,3 +1,19 @@
+# 1.0.0 (2023-08-08)
+
+
+### Bug Fixes
+
+* add beta version ([7ecc981](https://github.com/agungvr/nx-github-package-tampan/commit/7ecc9810f1b85aa4c56f582c6633789f77366ce9))
+* add format date ([6e404c5](https://github.com/agungvr/nx-github-package-tampan/commit/6e404c513abf80f7f58dabde993fdb6a7e71d162))
+* remove comment ([#44](https://github.com/agungvr/nx-github-package-tampan/issues/44)) ([03c43e1](https://github.com/agungvr/nx-github-package-tampan/commit/03c43e1bf191d41089af92730c6bd87bf513fa47))
+* remove date format ([53d1d04](https://github.com/agungvr/nx-github-package-tampan/commit/53d1d049326b4f65d2736df46c8e1b66f0da7326))
+* update package.json ([34cc112](https://github.com/agungvr/nx-github-package-tampan/commit/34cc112900df28e7e5be2d7373b7972e8b2098e9))
+
+
+### Features
+
+* beta2 to main ([#42](https://github.com/agungvr/nx-github-package-tampan/issues/42)) ([0474d01](https://github.com/agungvr/nx-github-package-tampan/commit/0474d016a1023220a27bcfc4c0c779e0d9107164))
+
 ## [1.0.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.0.0...tampan-lib-v1.0.1) (2023-08-07)
 
 
