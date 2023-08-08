@@ -10,7 +10,7 @@
     "branches": [
       "main",
       {
-        "name": "wew",
+        "name": "beta",
         "prerelease": true
       }
     ]
