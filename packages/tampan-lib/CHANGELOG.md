@@ -1,3 +1,18 @@
+# [1.2.0-alpha-button.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.2.0-alpha-button.1) (2023-08-09)
+
+
+### Bug Fixes
+
+* coba-2 ([f46b0ac](https://github.com/agungvr/nx-github-package-tampan/commit/f46b0acba70ba888302d9e703637592a29366fd2))
+* merge branch 'feat/button' into alpha-button ([f28b82c](https://github.com/agungvr/nx-github-package-tampan/commit/f28b82c49232a38af1e768e2bfff703768f787ad))
+* update button ([bd08b9c](https://github.com/agungvr/nx-github-package-tampan/commit/bd08b9c918751fe75ab3926cb4615d2d262416f7))
+* update button-2 ([a518df1](https://github.com/agungvr/nx-github-package-tampan/commit/a518df11aee030e3066e2b0bbe150a0ef4fc1b87))
+
+
+### Features
+
+* test add button ([78f084c](https://github.com/agungvr/nx-github-package-tampan/commit/78f084c4621e56bd3f89793853f8fa62bc15eb54))
+
 ## [1.1.2-beta.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.1.2-beta.1) (2023-08-08)
 
 
