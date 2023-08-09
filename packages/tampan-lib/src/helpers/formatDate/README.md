@@ -4,7 +4,6 @@
 
 ### dateFormat
 
-Format a date to a desired format.
 
 ```ts
 const date = new Date(2022, 4, 1)
