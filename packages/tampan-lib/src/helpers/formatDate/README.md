@@ -2,8 +2,7 @@
 
 ## Usage
 
-### dateFormat
-
+### dateFormat !
 ```ts
 const date = new Date(2022, 4, 1)
 const format = 'DD/MM/YYYY'
