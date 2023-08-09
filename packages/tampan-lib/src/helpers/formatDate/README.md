@@ -2,7 +2,7 @@
 
 ## Usage
 
-### dateFormat
+### dateFormat !
 
 
 ```ts
