@@ -1,3 +1,10 @@
+# [1.2.0-beta.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.2.0-beta.1) (2023-08-09)
+
+
+### Features
+
+* icon ([#52](https://github.com/agungvr/nx-github-package-tampan/issues/52)) ([6c502cb](https://github.com/agungvr/nx-github-package-tampan/commit/6c502cb6f36a6e8e52f902c2407e852ed0c2c565))
+
 ## [1.1.2-alpha-icon.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.1.2-alpha-icon.1) (2023-08-09)
 
 
