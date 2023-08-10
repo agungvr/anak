@@ -1,0 +1,45 @@
+name: 'Automated Bump Version & Generate Tag'
+
+on:
+  workflow_call:
+    secrets:
+      token:
+        required: true
+
+jobs:
+  bump-version:
+    name: 'Automated Bump Version & Generate Tag'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 'Checkout source code'
+        uses: 'actions/checkout@v2'
+        with:
+          ref: ${{ github.ref }}
+          token: ${{ secrets.token }}
+          persist-credentials: false
+      - name: 'Package JSON Before'
+        run: cat ./package.json
+      - name: 'Echo Latest Commit Message'
+        env:
+          COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
+        run: echo "commit message $COMMIT_MESSAGE"
+      - id: version-bump
+        name: 'Bumping Version & Generating Tag'
+        uses: phips28/gh-action-bump-version@v10.0.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.token }}
+        with:
+          tag-prefix: 'v'
+          minor-wording: 'feature,feat'
+          major-wording: 'major'
+          patch-wording: 'patch,fix,hotFix,bugFix,revert,refactor'
+          commit-message: 'ci: version bump to {{version}} [skip ci]'
+      - name: 'Package JSON After'
+        run: cat ./package.json
+      - name: 'Output Step'
+        env:
+          NEW_TAG: ${{ steps.version-bump.outputs.newTag }}
+        run: echo "new tag $NEW_TAG"
