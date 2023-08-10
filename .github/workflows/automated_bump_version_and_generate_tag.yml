@@ -10,8 +10,6 @@ jobs:
   bump-version:
     name: 'Automated Bump Version & Generate Tag'
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
       - name: 'Checkout source code'
