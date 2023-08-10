@@ -14,12 +14,6 @@ jobs:
       contents: write
 
     steps:
-      - name: 'Checkout source code'
-        uses: 'actions/checkout@v2'
-        with:
-          ref: ${{ github.ref }}
-          token: ${{ secrets.token }}
-          persist-credentials: false
       - name: 'Package JSON Before'
         run: cat ./package.json
       - name: 'Echo Latest Commit Message'
