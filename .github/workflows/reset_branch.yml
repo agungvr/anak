@@ -1,0 +1,26 @@
+name: 'Reset Branch'
+
+on:
+  workflow_call:
+    inputs:
+      main_branch:
+        required: true
+        type: string
+      branch:
+        required: true
+        type: string
+
+jobs:
+  reset-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Reset ${{ inputs.branch }} --hard
+        run: |
+          git fetch origin ${{ inputs.main_branch }}
+          git fetch origin ${{ inputs.branch }}
+          git checkout ${{ inputs.branch }}
+          git reset --hard ${{ inputs.main_branch }}
+          git push --force origin ${{ inputs.branch }}

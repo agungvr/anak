@@ -1,0 +1,25 @@
+name: Send Message To Slack Channel
+
+on:
+  workflow_call:
+    inputs:
+      payload_message:
+        required: true
+        type: string
+    secrets:
+      INCOMING_WEBHOOK_URL:
+        required: true
+
+jobs:
+  send-message:
+    name: Send Message To Slack Channel
+    runs-on: ubuntu-latest
+    steps:
+      - id: slack
+        name: Send GitHub Action trigger data to Slack workflow
+        uses: slackapi/slack-github-action@v1.24.0
+        with:
+          payload: ${{inputs.payload_message}}
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.INCOMING_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK

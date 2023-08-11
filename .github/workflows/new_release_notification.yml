@@ -1,0 +1,39 @@
+name: New Release Notification
+
+on:
+  workflow_call:
+    inputs:
+      payload_message:
+        type: string
+        required: true
+    secrets:
+      AUTH_GITHUB_TOKEN:
+        required: true
+      INCOMING_WEBHOOK_URL:
+        required: true
+
+jobs:
+  release-notification:
+    name: New Release Notification
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.get-release.outputs.release }}
+      release_notes: ${{ steps.get-release.outputs.description }}
+    steps:
+      - id: get-release
+        name: Get Latest Release
+        uses: pozetroninc/github-action-get-latest-release@v0.7.0
+        with:
+          repository: ${{ github.repository }}
+          token: ${{ secrets.AUTH_GITHUB_TOKEN }}
+          excludes: 'prerelease, draft'
+      - name: Latest Release
+        run: echo "Latest Release ${{steps.get-release.outputs.release}}"
+  send_message_to_slack:
+    name: 'Send Message To Slack'
+    needs: release-notification
+    uses: ./.github/workflows/send_message_to_slack_channel.yml
+    secrets:
+      INCOMING_WEBHOOK_URL: ${{ secrets.INCOMING_WEBHOOK_URL }}
+    with:
+      payload_message: ${{ inputs.payload_message }}
