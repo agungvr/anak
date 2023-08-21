@@ -7,7 +7,7 @@ module.exports = {
   pkgRoot: `dist/${srcRoot}`,
   tagFormat: `${appName}-v\${version}`,
   commitPaths: ['force-release.md', `${srcRoot}/*`],
-  assets: [`${srcRoot}/README.md`, `${srcRoot}/CHANGELOG.md`],
+  assets: [`${srcRoot}/README.md`],
   branches: [
     'main',
     {
@@ -23,17 +23,11 @@ module.exports = {
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
-    [
-      '@semantic-release/changelog',
-      {
-        changelogFile: `${srcRoot}/CHANGELOG.md`,
-      },
-    ],
     '@semantic-release/npm',
     [
       '@semantic-release/git',
       {
-        assets: [`${srcRoot}/package.json`, `${srcRoot}/CHANGELOG.md`],
+        assets: [`${srcRoot}/package.json`],
         message: `release(version): Release ${appName} \${nextRelease.version} \n\n\${nextRelease.notes}`,
       },
     ],
