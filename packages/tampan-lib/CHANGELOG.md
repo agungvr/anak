@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.2.0) (2023-08-21)
+
+
+### Features
+
+* **tampan-lib:** [@agungvr](https://github.com/agungvr) add alert component ([#56](https://github.com/agungvr/nx-github-package-tampan/issues/56)) ([a51f471](https://github.com/agungvr/nx-github-package-tampan/commit/a51f471f25cf6cbcf10e2cdf8e25ad4579ba43a7))
+
 ## [1.1.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.0...tampan-lib-v1.1.1) (2023-08-08)
 
 
