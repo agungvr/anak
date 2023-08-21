@@ -5,6 +5,28 @@
 
 * **tampan-lib:** [@agungvr](https://github.com/agungvr) add alert component ([65a3524](https://github.com/agungvr/nx-github-package-tampan/commit/65a35247b6739c78b6ec537559bdc477c030888f))
 
+# [1.2.0-beta.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.2.0-beta.1) (2023-08-09)
+
+
+### Features
+
+* icon ([#52](https://github.com/agungvr/nx-github-package-tampan/issues/52)) ([6c502cb](https://github.com/agungvr/nx-github-package-tampan/commit/6c502cb6f36a6e8e52f902c2407e852ed0c2c565))
+
+## [1.1.2-alpha-icon.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.1.2-alpha-icon.1) (2023-08-09)
+
+
+### Bug Fixes
+
+* coba-2 ([f46b0ac](https://github.com/agungvr/nx-github-package-tampan/commit/f46b0acba70ba888302d9e703637592a29366fd2))
+* init icon ([1ad5ac5](https://github.com/agungvr/nx-github-package-tampan/commit/1ad5ac5616e2b96d8dbdda588eef5265d1117060))
+
+## [1.1.2-beta.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.1...tampan-lib-v1.1.2-beta.1) (2023-08-08)
+
+
+### Bug Fixes
+
+* coba-2 ([f46b0ac](https://github.com/agungvr/nx-github-package-tampan/commit/f46b0acba70ba888302d9e703637592a29366fd2))
+
 ## [1.1.1](https://github.com/agungvr/nx-github-package-tampan/compare/tampan-lib-v1.1.0...tampan-lib-v1.1.1) (2023-08-08)
 
 

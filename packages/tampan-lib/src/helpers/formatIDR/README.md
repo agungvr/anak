@@ -1,6 +1,6 @@
 # formatIDR
 
-This module exports a single function formatIDR that takes a number and returns a string formatted as IDR currency.
+This module exports a single function formatIDR that takes a number and returns a string formatted as IDR currency.!
 
 ## Usage
 
