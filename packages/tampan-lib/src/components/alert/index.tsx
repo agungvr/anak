@@ -1,1 +1,1 @@
-export const Alert = () => <div>Alert2</div>
+export const Alert = () => <div>Alert3</div>

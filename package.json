@@ -72,7 +72,12 @@
     "vite-plugin-dts": "~1.7.1",
     "vite-plugin-eslint": "^1.8.1",
     "vite-tsconfig-paths": "^4.0.2",
-    "vitest": "^0.25.8"
+    "vitest": "^0.25.8",
+    "semantic-release": "^21.0.9",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^10.0.5",
+    "@semantic-release/release-notes-generator": "^11.0.4"
   },
   "dependencies": {
     "axios": "^1.2.6",
@@ -83,12 +88,5 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "url-pattern": "^1.0.3"
-  },
-  "resolutions": {
-    "semantic-release": "^21.0.9",
-    "@semantic-release/commit-analyzer": "^10.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^10.0.5",
-    "@semantic-release/release-notes-generator": "^11.0.4"
   }
 }
