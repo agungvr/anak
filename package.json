@@ -32,16 +32,11 @@
     "@nrwl/react": "15.6.0",
     "@nrwl/vite": "15.6.0",
     "@nrwl/workspace": "15.6.0",
-    "@semantic-release/commit-analyzer": "^10.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^10.0.5",
-    "@semantic-release/release-notes-generator": "^11.0.4",
     "@swc/cli": "~0.1.55",
     "@swc/core": "^1.2.173",
     "@swc/helpers": "~0.4.11",
     "@testing-library/react": "13.4.0",
     "@testing-library/react-hooks": "^8.0.1",
-    "@theunderscorer/nx-semantic-release": "^1.14.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
@@ -67,12 +62,10 @@
     "husky": "^8.0.0",
     "jsdom": "~20.0.3",
     "lint-staged": "^13.1.0",
-    "multi-semantic-release": "^3.0.1",
     "nx": "15.6.0",
     "prettier": "^2.6.2",
     "react-test-renderer": "18.2.0",
     "rollup-obfuscator": "^3.0.1",
-    "semantic-release": "^21.0.9",
     "semantic-release-npm-github-publish": "^1.5.4",
     "semantic-release-plus": "^20.0.0",
     "typescript": "~4.8.2",
@@ -91,5 +84,12 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "url-pattern": "^1.0.3"
+  },
+  "resolutions": {
+    "semantic-release": "^21.0.9",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^10.0.5",
+    "@semantic-release/release-notes-generator": "^11.0.4"
   }
 }
