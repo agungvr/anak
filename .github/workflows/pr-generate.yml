@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout Repo B
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Create New Branch
         run: |
@@ -27,21 +29,18 @@ jobs:
         run: |
           pnpm install --no-frozen-lockfile
 
-      - name: Set Git Identity
-        run: |
-          git config user.email "agungvr@gmail.com"
-          git config user.name "Agung Nugraha"
-
       - name: Create PR
         run: |
           npx nx run tampan-lib:token
 
       - name: Commit and Push Changes
         run: |
+          git config user.email "agungvr@gmail.com"
+          git config user.name "Agung Nugraha"
           git add .
           git commit -m "fix: new token updates"
           git pull origin main
-          git push origin new-token-design --force
+          git push origin new-token-design
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
@@ -50,4 +49,6 @@ jobs:
           commit-message: 'fix: auto generated PR'
           title: 'fix: auto generated PR'
           body: 'This PR was automatically generated.'
+          base: main
           branch: new-token-design
+          delete-branch: true
