@@ -12,12 +12,6 @@ jobs:
       - name: Checkout Repo B
         uses: actions/checkout@v3
 
-      - name: Check if Branch Exists
-        run: |
-          if git show-ref --quiet refs/heads/new-token-design; then
-              git push origin --delete new-token-design
-          fi
-
       - name: Create New Branch
         run: |
           git checkout -b new-token-design
@@ -46,7 +40,8 @@ jobs:
         run: |
           git add .
           git commit -m "fix: new token updates"
-          git push origin new-token-design
+          git pull origin main
+          git push origin new-token-design --force
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
