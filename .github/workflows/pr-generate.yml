@@ -19,6 +19,10 @@ jobs:
       - name: Set up .env with Token
         run: echo "GH_ACCESS_TOKEN=${{ secrets.GH_ACCESS_TOKEN }}" > .env
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
       - name: Install Nx and dependencies
         run: |
           pnpm install
