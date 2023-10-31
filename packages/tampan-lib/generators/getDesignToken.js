@@ -6,7 +6,7 @@ const repoOwner = 'astronautsid'
 const repoName = 'astro-design-token'
 const filePath = 'tokens.json'
 const rawUrl = `https://raw.githubusercontent.com/${repoOwner}/${repoName}/develop/${filePath}`
-const accessToken = process.env.GITHUB_ACCESS_TOKEN
+const accessToken = process.env.GH_ACCESS_TOKEN
 
 const axiosConfig = {
   headers: {

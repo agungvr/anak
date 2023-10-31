@@ -17,7 +17,7 @@ jobs:
           git checkout -b new-token-design
 
       - name: Set up .env with Token
-        run: echo "GITHUB_ACCESS_TOKEN=${{ secrets.GITHUB_ACCESS_TOKEN }}" > .env
+        run: echo "GH_ACCESS_TOKEN=${{ secrets.GH_ACCESS_TOKEN }}" > .env
 
       - name: Create PR
         run: |
