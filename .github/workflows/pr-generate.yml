@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout Repo B
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Create New Branch
         run: |
@@ -50,4 +50,4 @@ jobs:
           title: 'Auto-generated PR'
           body: 'This PR was automatically generated.'
           base: main
-          head: new-token-design
+          branch: new-token-design
