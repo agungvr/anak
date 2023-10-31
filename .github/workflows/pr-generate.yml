@@ -29,8 +29,8 @@ jobs:
 
       - name: Set Git Identity
         run: |
-          git config user.email "noreply@gegeelisa.com"
-          git config user.name "Gege Elisa (BOT)"
+          git config user.email "agungvr@gmail.com"
+          git config user.name "Agung Nugraha"
 
       - name: Create PR
         run: |
