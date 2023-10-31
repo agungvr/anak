@@ -12,9 +12,11 @@ jobs:
       - name: Checkout Repo B
         uses: actions/checkout@v3
 
-      - name: Delete Exisiting Branch new-token-design
+      - name: Check if Branch Exists
         run: |
-          git branch -d new-token-design
+          if git show-ref --quiet refs/heads/new-token-design; then
+              git push origin --delete new-token-design
+          fi
 
       - name: Create New Branch
         run: |
