@@ -40,7 +40,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.WEW_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'Auto-generated PR'
           title: 'Auto-generated PR'
           body: 'This PR was automatically generated.'
