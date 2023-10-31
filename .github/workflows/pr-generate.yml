@@ -16,7 +16,7 @@ jobs:
 
       - name: Create New Branch
         run: |
-          git checkout -b new-token-design
+          git checkout -b new-token-design main
 
       - name: Set up .env with Token
         run: echo "GH_ACCESS_TOKEN=${{ secrets.GH_ACCESS_TOKEN }}" > .env
@@ -39,15 +39,13 @@ jobs:
           git config user.name "Agung Nugraha"
           git add .
           git commit -m "fix: new token updates"
-          git pull origin main
-          git push origin new-token-design
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.PULL_REQUEST_TOKEN }}
           commit-message: 'fix: auto generated PR'
-          title: 'fix: auto generated PR'
+          title: 'fix: new token'
           body: 'This PR was automatically generated.'
           base: main
-          branch: new-token-design
+          branch: wew
