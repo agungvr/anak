@@ -12,6 +12,10 @@ jobs:
       - name: Checkout Repo B
         uses: actions/checkout@v3
 
+      - name: Delete Exisiting Branch new-token-design
+        run: |
+          git branch -d new-token-design
+
       - name: Create New Branch
         run: |
           git checkout -b new-token-design
