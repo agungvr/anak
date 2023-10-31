@@ -27,6 +27,11 @@ jobs:
         run: |
           pnpm install --no-frozen-lockfile
 
+      - name: Set Git Identity
+        run: |
+          git config user.email "noreply@gegeelisa.com"
+          git config user.name "Gege Elisa (BOT)"
+
       - name: Create PR
         run: |
           npx nx run tampan-lib:token
