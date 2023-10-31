@@ -25,7 +25,7 @@ jobs:
 
       - name: Install Nx and dependencies
         run: |
-          pnpm install
+          pnpm install --no-frozen-lockfile
 
       - name: Create PR
         run: |
