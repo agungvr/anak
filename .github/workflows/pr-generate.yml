@@ -50,5 +50,4 @@ jobs:
           commit-message: 'fix: auto generated PR'
           title: 'fix: auto generated PR'
           body: 'This PR was automatically generated.'
-          base: main
           branch: new-token-design
