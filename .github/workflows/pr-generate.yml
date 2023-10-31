@@ -1,0 +1,40 @@
+name: Generate PR from Changes
+
+on:
+  repository_dispatch:
+    types: [trigger-pr]
+
+jobs:
+  generate_pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo B
+        uses: actions/checkout@v2
+
+      - name: Create New Branch
+        run: |
+          git checkout -b new-token-design
+
+      - name: Set up .env with Token
+        run: echo "GITHUB_ACCESS_TOKEN=${{ secrets.GITHUB_ACCESS_TOKEN }}" > .env
+
+      - name: Create PR
+        run: |
+          npx nx run tampan-lib:token
+
+      - name: Commit and Push Changes
+        run: |
+          git add .
+          git commit -m "Update changes"
+          git push origin new-token-design
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.WEW_TOKEN }}
+          commit-message: 'Auto-generated PR'
+          title: 'Auto-generated PR'
+          body: 'This PR was automatically generated.'
+          base: main
+          head: new-token-design

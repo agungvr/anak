@@ -86,5 +86,12 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "url-pattern": "^1.0.3"
+  },
+  "resolutions": {
+    "semantic-release": "^21.0.9",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^10.0.5",
+    "@semantic-release/release-notes-generator": "^11.0.4"
   }
 }

@@ -8,7 +8,7 @@
     "types": ["vite/client", "vitest"]
   },
   "files": [],
-  "include": [],
+  "exclude": ["generators/*"],
   "references": [
     {
       "path": "./tsconfig.lib.json"
