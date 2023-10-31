@@ -39,7 +39,7 @@ jobs:
       - name: Commit and Push Changes
         run: |
           git add .
-          git commit -m "Update changes"
+          git commit -m "patch: Update changes"
           git push origin new-token-design
 
       - name: Create Pull Request
