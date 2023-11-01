@@ -31,8 +31,8 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config user.email "agungvr@gmail.com"
-          git config user.name "Agung Nugraha"
+          git config user.email "noreply@tampan.com"
+          git config user.name "Gege Elisa (BOT)"
           git add .
           git commit -m "fix: new token updates"
 
